@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Tool</title>
+</head>
+<body>
+    <h1>Encryption Tool</h1>
+    <form action="/decrypt" method="post">
+        <label for="fichier_entree">Fichier d'entrée:</label>
+        <input type="text" name="fichier_entree" required><br>
+
+        <label for="fichier_sortie">Fichier de sortie:</label>
+        <input type="text" name="fichier_sortie" required><br>
+
+        <label for="cle_chiffrement">Clé de chiffrement:</label>
+        <input type="text" name="cle_chiffrement" required><br>
+
+        <label for="mode_chiffrement">Mode de chiffrement:</label>
+        <input type="text" name="mode_chiffrement" required><br>
+
+        <label for="vecteur">Vecteur:</label>
+        <input type="text" name="vecteur" required><br>
+
+        <label for="colonnes">Colonnes:</label>
+        <input type="text" name="colonnes"><br>
+
+        <label for="separateur">Séparateur:</label>
+        <input type="text" name="separateur"><br>
+
+        <input type="submit" value="Décrypter">
+    </form>
+
+    {% if result_message %}
+        <p>{{ result_message }}</p>
+    {% endif %}
+</body>
+</html>
